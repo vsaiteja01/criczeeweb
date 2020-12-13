@@ -1,0 +1,72 @@
+﻿@model IEnumerable<cricZee.Quizz>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+
+}
+
+
+<h1> Quizz </h1>
+
+
+<table class="table">
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.Ques)
+                </td>
+                <td>
+                    <input type="radio" id="Option1" name=" @Html.DisplayFor(modelItem => item.Ques)" class="rb" value=" @Html.DisplayFor(modelItem => item.Option1)" />
+                    @Html.DisplayFor(modelItem => item.Option1)
+                </td>
+                <td>
+
+                    <input type="radio" id="Option2" name=" @Html.DisplayFor(modelItem => item.Ques)" class="rb" value=" @Html.DisplayFor(modelItem => item.Option2)" />
+                    @Html.DisplayFor(modelItem => item.Option2)
+                </td>
+                <td>
+                    <input type="radio" id="Option3" name=" @Html.DisplayFor(modelItem => item.Ques)" class="rb" value=" @Html.DisplayFor(modelItem => item.Option3)" />
+
+                    @Html.DisplayFor(modelItem => item.Option3)
+                </td>
+                <td>
+                    <input type="radio" id="Option4" name=" @Html.DisplayFor(modelItem => item.Ques)" class="rb" value=" @Html.DisplayFor(modelItem => item.Option4)" />
+                    @Html.DisplayFor(modelItem => item.Option4)
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label id="corrections" name=" @Html.DisplayFor(modelItem => item.Ques)" class="rb" style="display:none;color:forestgreen;"><b>@Html.DisplayFor(modelItem => item.Correct)</b></label>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button type="button" id="buttonexam" class="btn-success" onclick="displayresult();">
+    Submit
+</button>
+
+<label id="useranswers"></label>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#buttonexam").click(function () {
+            $(".rb").show();
+            $(".rb").attr("disabled", true);
+        });
+    });
+    </script>
+
+
+
+          
+        
