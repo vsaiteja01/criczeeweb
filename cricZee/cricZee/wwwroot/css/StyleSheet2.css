@@ -1,0 +1,12 @@
+﻿
+body{
+    background-image: url(../back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 12px;
+    color: #039;
+    background-color: #FCEBB6;
+}

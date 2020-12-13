@@ -2,15 +2,18 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = null;
+    
 
 }
 
 
 <h1> Quizz </h1>
+<head>
+    <link href="~/css/quizz.css" rel="stylesheet" />
+</head>
 
-
-<table class="table">
+<body>
+<table class="table table-dark table-striped">
 
     <tbody>
         @foreach (var item in Model)
@@ -66,7 +69,5 @@
     });
     </script>
 
-
-
-          
+</body>
         

@@ -3,82 +3,85 @@
 @{
     ViewData["Title"] = "Index";
 }
+<head>
 
-<h1>Index</h1>
+    <link href="~/css/Match.css" rel="stylesheet" />
+</head>
+<body>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-           
-            <th>
-                @Html.DisplayNameFor(model => model.Team1)
-            </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Team2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TossWinner)
-            </th>
-            
-          
-            <th>
-                @Html.DisplayNameFor(model => model.Winner)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WinByRuns)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WinByWickets)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PlayerOfMatch)
-            </th>
-         
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-           
-            
-           
-            <td>
-                @Html.DisplayFor(modelItem => item.Team1)
-            </td>
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.Team2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TossWinner)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Winner)
-            </td>
-          
-           
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.WinByRuns)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WinByWickets)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlayerOfMatch)
-            </td>
-     
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Team1)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Team2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TossWinner)
+                </th>
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Winner)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WinByRuns)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WinByWickets)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlayerOfMatch)
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Team1)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Team2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TossWinner)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Winner)
+                    </td>
+
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WinByRuns)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WinByWickets)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlayerOfMatch)
+                    </td>
+
+
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</body>
