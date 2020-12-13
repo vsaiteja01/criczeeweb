@@ -171,7 +171,6 @@ C:\Users\saite\Desktop\cricZee\cricZee\cricZee\obj\Release\netcoreapp3.1\Razor\V
 C:\Users\saite\Desktop\cricZee\cricZee\cricZee\obj\Release\netcoreapp3.1\Razor\Views\DelhiCapitals\Index.cshtml.g.cs
 C:\Users\saite\Desktop\cricZee\cricZee\cricZee\obj\Release\netcoreapp3.1\Razor\Views\Home\Home.cshtml.g.cs
 C:\Users\saite\Desktop\cricZee\cricZee\cricZee\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\saite\Desktop\cricZee\cricZee\cricZee\obj\Release\netcoreapp3.1\Razor\Views\Home\Main.cshtml.g.cs
 C:\Users\saite\Desktop\cricZee\cricZee\cricZee\obj\Release\netcoreapp3.1\Razor\Views\KingsXipunjabs\Create.cshtml.g.cs
 C:\Users\saite\Desktop\cricZee\cricZee\cricZee\obj\Release\netcoreapp3.1\Razor\Views\KingsXipunjabs\Delete.cshtml.g.cs
 C:\Users\saite\Desktop\cricZee\cricZee\cricZee\obj\Release\netcoreapp3.1\Razor\Views\KingsXipunjabs\Details.cshtml.g.cs

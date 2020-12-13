@@ -1,73 +1,76 @@
 ﻿@model IEnumerable<cricZee.Models.PointsTable>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Points Table";
 }
 
-<h1>Index</h1>
+<head>
+    <link href="~/css/Match.css" rel="stylesheet" />
+</head>
+<body>
+    <h3 style="color:ghostwhite">Points Table</h3>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.TeamId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Matches)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Won)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Lost)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tied)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Points)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nrr)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nrrposition)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Matches)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Won)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lost)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tied)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Points)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nrr)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nrrposition)
-            </td>
-            
-        </tr>
-}
-    </tbody>
-</table>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Teams)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Matches)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Won)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Lost)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tied)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Points)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nrr)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nrrposition)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Teams)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Matches)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Won)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Lost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tied)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Points)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nrr)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nrrposition)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

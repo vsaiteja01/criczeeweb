@@ -2,43 +2,46 @@
 
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Top Fielders";
 }
+<head>
+    <link href="~/css/Match.css" rel="stylesheet" />
+</head>
+<body>
+    <h3 style="color:ghostwhite">Top Fielders</h3>
+    <img src="~/lib/fielder.jpg" height="250" width="250">
 
-<h1>Index</h1>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Player)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Matches)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Catches)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Player)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Matches)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Catches)
+                    </td>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Player)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Matches)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Catches)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Player)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Matches)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Catches)
-            </td>
-            
-        </tr>
-}
-    </tbody>
-</table>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
